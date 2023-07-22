@@ -1,2 +1,2 @@
 # Cinema Verse App
-API to search movie, [click to see]()
+API to search movies, [click to see]()
