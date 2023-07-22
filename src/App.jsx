@@ -22,9 +22,11 @@ const App = () => {
 
     setMovies(data.Search);
   };
+  // let input =document.querySelector("input");
 
   useEffect(() => {
     SearchMovies("Baahubali");
+
   }, []);
   return (
     <>
@@ -36,15 +38,15 @@ const App = () => {
             placeholder="Search for movies."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-          />
-          {/* {
-           document.getElementById("enterInput").addEventListener("keypress", function(event) {
-              if (event.key === "Enter") {
-                // event.preventDefault();
-                SearchMovies(searchTerm);
+            //enter to search
+            onKeyUp={(e)=>{
+              if(e.key=='Enter'){
+                // console.log(searchTerm);
+                SearchMovies(searchTerm)
+
               }
-            })
-          } */}
+            }}
+          />
           <img
             src={SeachIcon}
             alt="search"
